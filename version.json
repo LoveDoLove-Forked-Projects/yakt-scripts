@@ -1,0 +1,30 @@
+{
+  "version": "1.1",
+  "updated": "2025-05-29",
+  "changelog": [
+    " - Initial scripts update",
+    " - Removed schedutil tweaks (Unrequired and old)"
+  ],
+  "scriptsList": [
+    {
+      "name": "battery.sh",
+      "sha256": "e3b0c44298fc1c14..."
+    },
+    {
+      "name": "balanced.sh",
+      "sha256": "9f86d081884c7d65..."
+    },
+    {
+      "name": "gaming.sh",
+      "sha256": "0cc175b9c0f1b6a8..."
+    },
+    {
+      "name": "latency.sh",
+      "sha256": "900150983cd24fb0..."
+    },
+    {
+      "name": "extras.sh",
+      "sha256": "900150983cd24fb0..."
+    }
+  ]
+}
