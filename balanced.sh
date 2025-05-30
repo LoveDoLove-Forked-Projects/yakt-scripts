@@ -66,6 +66,7 @@ ERROR_LOG="/data/data/com.notzeetaa.yakt/files/error.log"
 MODULE_PATH="/sys/module"
 KERNEL_PATH="/proc/sys/kernel"
 MEMORY_PATH="/proc/sys/vm"
+KGSL_PATH="/sys/class/kgsl/kgsl-3d0/"
 
 echo -e "[$(date "+%H:%M:%S")] Executing Balanced profile...\n" > $INFO_LOG
 
@@ -83,5 +84,6 @@ write_value "$MEMORY_PATH/page-cluster" 0
 write_value "$MEMORY_PATH/swappiness" 60
 write_value "$MEMORY_PATH/dirty_ratio" 60
 write_value "$MODULE_PATH/workqueue/parameters/power_efficient" Y
+write_value "$KGSL_PATH/throttling" 1
 
 echo -e "\n[$(date "+%H:%M:%S")] Balanced profile executed" >> $INFO_LOG

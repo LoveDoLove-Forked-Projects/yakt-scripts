@@ -66,6 +66,7 @@ ERROR_LOG="/data/data/com.notzeetaa.yakt/files/error.log"
 MODULE_PATH="/sys/module"
 KERNEL_PATH="/proc/sys/kernel"
 MEMORY_PATH="/proc/sys/vm"
+KGSL_PATH="/sys/class/kgsl/kgsl-3d0/"
 
 echo -e "[$(date "+%H:%M:%S")] Executing Latency profile...\n" > $INFO_LOG
 
@@ -80,8 +81,9 @@ write_value "$MEMORY_PATH/vfs_cache_pressure" 50
 write_value "$MEMORY_PATH/stat_interval" 10
 write_value "$MEMORY_PATH/compaction_proactiveness" 0
 write_value "$MEMORY_PATH/page-cluster" 0
-write_value "$MEMORY_PATH/swappiness" 609''
+write_value "$MEMORY_PATH/swappiness" 60
 write_value "$MEMORY_PATH/dirty_ratio" 15
 write_value "$MODULE_PATH/workqueue/parameters/power_efficient" Y
+write_value "$KGSL_PATH/throttling" 1
 
 echo -e "\n[$(date "+%H:%M:%S")] Latency profile executed" >> $INFO_LOG
