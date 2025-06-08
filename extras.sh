@@ -73,12 +73,12 @@ elif [ "$MODE" = "DNS" ] && [ "$PROFILE" = "automatic" ]; then
 elif [ "$MODE" = "DEX" ] && [ "$PROFILE" = "Speed" ]; then
     # shellcheck disable=SC2129
     echo "[$(date "+%H:%M:%S")] Dex optimization started (speed)" >> $INFO_LOG
-    su -c 'pm compile -m speed -a -p PRIORITY_BOOT' 2>> $INFO_LOG
+    su -c 'pm compile -m speed -a' 2>> $INFO_LOG
     echo "[$(date "+%H:%M:%S")] Dex optimization finished" >> $INFO_LOG
 elif [ "$MODE" = "DEX" ] && [ "$PROFILE" = "Extreme" ]; then
     # shellcheck disable=SC2129
     echo "[$(date "+%H:%M:%S")] Dex optimization started (extreme)" >> $INFO_LOG
-    su -c 'pm compile -m everything -a -p PRIORITY_BOOT' 2>> $INFO_LOG
+    su -c 'pm compile -m everything -a' 2>> $INFO_LOG
     echo "[$(date "+%H:%M:%S")] Dex optimization finished" >> $INFO_LOG
 elif [ "$MODE"  =  "oneplus" ] && [ "$PROFILE" = "true" ]; then
     pm disable-user --user 0 com.oplus.battery
