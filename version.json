@@ -1,11 +1,13 @@
 {
-  "version": "1.3",
-  "updated": "2025-06-08",
+  "version": "1.4",
+  "updated": "2025-06-29",
   "changelog": [
-    "Tune vfs_cache_pressure to 80 for balanced cache reclaiming",
-    "Removed unnecessary DEX optimization scripts for devices running Android 14 and above",
-    "Disabled kernel messages to /dev/kmsg",
-    "Disabled scheduler statistics gathering"
+    "Set GPU throttling to 2 on battery profile (More aggressive thermal throttling)",
+    "Tweak bus_split per profile settings (Reduces latency)",
+    "Tweak force_no_nap per profile settings (Improves gaming performance)",
+    "Tweak min_granularity_ns per profile settings (Reduces latency)",
+    "Tweak wakeup_granularity_ns per profile settings (Reduces latency)",
+    "Dynamically adjust perf_cpu_time_max_percent based on core count"
   ],
   "scriptsList": [
     {
